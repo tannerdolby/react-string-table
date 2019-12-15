@@ -10,20 +10,21 @@ The Square component (class Square extends React.component) is used to render a 
 * Passing data through props we can pass data from the Board component to the Square component. This was accomplished by changing the renderSquare method to pass a prop called value to the Square component.
 
 First pass the prop value into the renderSquare method within the Board class
-- renderSquare(i) {
--   return <Square value ={i} />;
-- }
+renderSquare(i) {
+  return <Square value ={i} />;
+}
 Next, change the render method within the Square class to show the passed prop value from Board component.
-- render() {
--   return (
--     <button className="square">
--       {this.props.value} //showing the value passed by prop
--     </button>
+render() {
+  return (
+    <button className="square">
+    {this.props.value} //showing the value passed by prop
+    </button>
 
 ### Interactive components
 Filling the Square component with the string "X" when a square is clicked will be the first interactive component. Going into the Square component, the button tag returned from the render() function in Square must be changed to alert in browser if a square is clicked.
 Passing a function as the onClick prop makes it so react will only call this func after a square has been clicked. This is creating an event handler to display an alert to the page when a Square component has been clicked.
-- <button className="square" onClick={function() { alert('click'); }}>
+
+<button className="square" onClick={function() { alert('click'); }}>
 
 Now to replace that test function for handling a click, we can make the Square component remember it was clicked. By setting the Square components state to an 'X'. Using this.state within the Square components constructor to initialize the state to null then change it to 'X' when a square is clicked.
 
