@@ -1,0 +1,24 @@
+{
+  "name": "tan-first-node-package",
+  "version": "0.0.1",
+  "description": "my first node package for calculating area of a triangle",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TannerDolby/Nodejs_Basics.git"
+  },
+  "keywords": [
+    "node",
+    "triangle",
+    "area"
+  ],
+  "author": "Tanner Dolby (npm user: strook)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TannerDolby/Nodejs_Basics/issues"
+  },
+  "homepage": "https://github.com/TannerDolby/Nodejs_Basics#readme"
+}
