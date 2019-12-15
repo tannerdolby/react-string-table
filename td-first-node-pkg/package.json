@@ -1,6 +1,6 @@
 {
   "name": "td-first-node-pkg",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "My first react package",
   "main": "index.js",
   "scripts": {
