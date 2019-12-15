@@ -3,22 +3,31 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 class Square extends React.Component {
+  // adding a constructor to Square class to initialize state
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: null,
+    };
+  }
+
   render() {
     return (
-      <button className="square">
-        {this.props.value}
+      //event handler for Square component onClick page alert (setting state to 'X' if clicked)
+      <button className="square" onClick={function() => this.setState({value: 'X'})}>
+        {this.state.value}
       </button>
     );
   }
 }
-
+//
 class Board extends React.Component {
   renderSquare(i) {
     return <Square value={i} />;
   }
 
   render() {
-    const status = 'Next player: X';
+    const status = 'Next Game player: X';
 
     return (
       <div>
@@ -37,7 +46,12 @@ class Board extends React.Component {
           {this.renderSquare(6)}
           {this.renderSquare(7)}
           {this.renderSquare(8)}
+        <div className="board-row">
+          {this.renderSquare(9)}
+          {this.renderSquare(10)}
+          {this.renderSquare(11)}
         </div>
+      </div>
       </div>
     );
   }
