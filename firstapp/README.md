@@ -8,17 +8,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 The Square component (class Square extends React.component) is used to render a single <button>. The Board component renders 12 squares (4x3 matrix) with (mxn)=(rows,columns). The last component is the Game, this class renders a board with placeholder values from 1-12 for each square to begin with. By passing a prop from the parent Board component to a child Square component the board is now populated with the numbers there are squares.
 
 * Passing data through props we can pass data from the Board component to the Square component. This was accomplished by changing the renderSquare method to pass a prop called value to the Square component.
-
-First pass the prop value into the renderSquare method within the Board class
-- renderSquare(i) {
--  return <Square value ={i} />;
-- }
-Next, change the render method within the Square class to show the passed prop value from Board component.
-- render() {
--  return (
--    <button className="square">
--    {this.props.value} //showing the value passed by prop
--    </button>
+- First pass the prop value into the renderSquare method within the Board class
+- Next, change the render method within the Square class to show the passed prop value from Board component.
 
 ### Interactive components
 Filling the Square component with the string "X" when a square is clicked will be the first interactive component. Going into the Square component, the button tag returned from the render() function in Square must be changed to alert in browser if a square is clicked.
