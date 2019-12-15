@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/TannerDolby/Single_page_web_app_React/issues"
   },
-  "homepage": "https://github.com/TannerDolby/Single_page_web_app_React#readme"
+  "homepage": "https://github.com/TannerDolby/Single_page_web_app_React#readme",
+  "dependencies": {
+    "keywords": "^0.1.2"
+  }
 }
