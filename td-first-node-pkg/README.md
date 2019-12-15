@@ -9,6 +9,5 @@ React is
 
 ## Getting started
 
-
 ## Author
 Tanner Dolby (2019) \n npm username: strook
