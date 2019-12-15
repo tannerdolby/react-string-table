@@ -13,8 +13,10 @@ class Square extends React.Component {
 
   render() {
     return (
-      //event handler for Square component onClick page alert (setting state to 'X' if clicked)
-      <button className="square" onClick={function() => this.setState({value: 'X'})}>
+      //event handler for Square component using onClick prop (setting state to 'X' if clicked)
+      //className prop and onClick props on separate lines for readibility
+      <button className="square"
+      onClick={() => this.setState({value: 'X'})}>
         {this.state.value}
       </button>
     );
@@ -36,22 +38,20 @@ class Board extends React.Component {
           {this.renderSquare(0)}
           {this.renderSquare(1)}
           {this.renderSquare(2)}
+          {this.renderSquare(3)}
         </div>
         <div className="board-row">
-          {this.renderSquare(3)}
           {this.renderSquare(4)}
           {this.renderSquare(5)}
-        </div>
-        <div className="board-row">
           {this.renderSquare(6)}
           {this.renderSquare(7)}
-          {this.renderSquare(8)}
+        </div>
         <div className="board-row">
+          {this.renderSquare(8)}
           {this.renderSquare(9)}
           {this.renderSquare(10)}
           {this.renderSquare(11)}
         </div>
-      </div>
       </div>
     );
   }

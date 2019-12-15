@@ -19,6 +19,9 @@ Passing a function as the onClick prop makes it so react will only call this fun
 
 Now to replace that test function for handling a click, we can make the Square component remember it was clicked. By setting the Square components state to an 'X'. Using this.state within the Square components constructor to initialize the state to null then change it to 'X' when a square is clicked.
 
+## Moving forward with Game logic
+-To come..
+
 ## Available Scripts
 
 In the project directory, you can run:
