@@ -11,5 +11,4 @@ React is
 
 
 ## Author
-Tanner Dolby (2019)
-npm username: strook
+Tanner Dolby (2019) \n npm username: strook
