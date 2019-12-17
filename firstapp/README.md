@@ -20,7 +20,7 @@ Passing a function as the onClick prop makes it so react will only call this fun
 Now to replace that test function for handling a click, we can make the Square component remember it was clicked. By setting the Square components state to an 'X'. Using this.state within the Square components constructor to initialize the state to null then change it to 'X' when a square is clicked.
 
 ## Moving forward with Game logic
--To come.. ALternating Square components to be 'X' and 'O' plus the winning conditions
+- Now that the basic foundation of the tic tac toe game is established. Alternating squares to be an 'X' or 'O' and storing the state of all square components in one location to determine the games winner. By storing the games state within the Board component. We can pass a prop from the parent Board to each square and tell it what to display. 
 
 ## Available Scripts
 
