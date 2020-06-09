@@ -191,7 +191,7 @@ class MyNavComponent extends React.Component {
     render() {
         return (
             <div className="navbar">
-                <h1><a href="index.js" aria-label="home page button">StrTable.io</a></h1>
+                <h1><a href="https://tannercd-react-table.netlify.app" aria-label="home page button">StrTable.io</a></h1>
                 <nav>
                     <ul>
                         <li><a href="https://github.com/tannercd" target="_blank" rel="noopener noreferrer"><i className="fa fa-github" aria-label="github link"/></a></li>
