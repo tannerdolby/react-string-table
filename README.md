@@ -1,4 +1,4 @@
-<img width="877" alt="reactStrTable" src="https://user-images.githubusercontent.com/48612525/84111533-fb767d80-a9db-11ea-84ee-b5d6f36e1247.png">
+<img width="1259" alt="reactStringTable" src="https://user-images.githubusercontent.com/48612525/84111723-61fb9b80-a9dc-11ea-82f2-0a1103daf00f.png">
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f02ad181-3a08-4549-b94e-e35889ae8f47/deploy-status)](https://app.netlify.com/sites/reactstrtable/deploys)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
