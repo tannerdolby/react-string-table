@@ -1,4 +1,4 @@
-<img width="933" alt="App image" src="https://user-images.githubusercontent.com/48612525/84092473-542e2200-a9ac-11ea-8eb7-6f03d0fc22f3.png">
+<img width="1240" alt="React app Table" src="https://user-images.githubusercontent.com/48612525/84092739-2dbcb680-a9ad-11ea-9359-73e7d0fe6412.png">
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
