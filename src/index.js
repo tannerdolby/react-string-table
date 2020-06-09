@@ -86,7 +86,8 @@ class MyApp extends React.Component {
             <div>
                 <MyNavComponent />
                 <GetInputComponent input={this.state.inputVal} handleChange={this.handleChange} handleReset={this.handleReset} />
-                <RenderInputComponent input={this.state.inputVal} strLen={this.state.strLength} strLower={this.state.strLower} strUpper={this.state.strUpper} charOne={this.state.firstChar} charLast={this.state.lastChar} initials={this.state.initials} titleCase={this.state.titleCase} trimStr={this.state.strTrim} camelStr={this.state.camelCase} strAscii={this.state.strASCII} strHex={this.state.strHex} ceasarCipher={this.state.rot13}/>
+                <RenderInputComponent input={this.state.inputVal} strLen={this.state.strLength} strLower={this.state.strLower} strUpper={this.state.strUpper} charOne={this.state.firstChar} charLast={this.state.lastChar} initials={this.state.initials} titleCase={this.state.titleCase} trimStr={this.state.strTrim} camelStr={this.state.camelCase} strAscii={this.state.strASCII} strHex={this.state.strHex} ceasarCipher={this.state.rot13} />
+                <MyFooterComponent />
             </div>
         );
     }
@@ -203,4 +204,19 @@ class MyNavComponent extends React.Component {
         )
     }
 }
+
+class MyFooterComponent extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    render() {
+        return (
+            <div className="footer">
+                <h2>Built with React</h2><img width="30px" height="30px" src="logo192.png" alt="react logo"/>
+                <h2>Hosted with Netlify <i className="fa fa-bolt" aria-hidden="true" /></h2>
+            </div>
+        );
+    }
+}
+
 ReactDOM.render(<MyApp />, document.getElementById("root"));
