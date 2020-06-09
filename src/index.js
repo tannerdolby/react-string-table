@@ -23,6 +23,7 @@ class MyApp extends React.Component {
         this.handleChange = this.handleChange.bind(this);
         this.handleReset = this.handleReset.bind(this);
     }
+    
     handleChange(event) {
         let inputStr = event.target.value;
         let charArr = inputStr.split(" ");
@@ -81,23 +82,11 @@ class MyApp extends React.Component {
             rot13: ""
         });
     }
-    componentDidMount() {
-        let input = document.getElementById("input-field");
-        let resetButton = document.getElementById("reset-btn");
-        input.addEventListener("keyup", this.handleChange);
-        resetButton.addEventListener("click", this.handleReset);
-    }
-    componentWillUnmount() {
-        let input = document.getElementById("input-field");
-        let resetButton = document.getElementById("reset-btn");
-        input.removeEventListener("keyup", this.handleChange);
-        resetButton.removeEventListener("click", this.handleReset);
-    }
     render() {
         return (
             <div>
                 <MyNavComponent />
-                <GetInputComponent input={this.state.inputVal} />
+                <GetInputComponent input={this.state.inputVal} handleChange={this.handleChange} handleReset={this.handleReset} />
                 <RenderInputComponent input={this.state.inputVal} strLen={this.state.strLength} strLower={this.state.strLower} strUpper={this.state.strUpper} charOne={this.state.firstChar} charLast={this.state.lastChar} initials={this.state.initials} titleCase={this.state.titleCase} trimStr={this.state.strTrim} camelStr={this.state.camelCase} strAscii={this.state.strASCII} strHex={this.state.strHex} ceasarCipher={this.state.rot13} />
                 <MyFooterComponent />
             </div>
@@ -115,8 +104,8 @@ class GetInputComponent extends React.Component {
                 <h2>String Variation Table</h2>
                 <p className="input-note">Watch out! There could be state, props or callback functions flying around behind the scenes <i className="fa fa-smile-o" aria-hidden="true" /></p>
                 <div>
-                    <input value={this.props.input} id="input-field" placeholder="Enter string..." />
-                    <button className="reset" id="reset-btn">Clear</button>
+                    <input value={this.props.input} onChange={this.props.handleChange} id="input-field" placeholder="Enter string..." />
+                    <button className="reset" onClick={this.props.handleReset}>Clear</button>
                 </div>
             </div>
         );
