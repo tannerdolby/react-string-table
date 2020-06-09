@@ -169,3 +169,21 @@ html, body {
 .outputs table tr:nth-child(odd) td {
     background: #fff;
 }
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.footer h2 {
+    font-family: var(--google-font-inconsolata);
+    margin: 10px;
+    padding-left: 10px;
+    color: #444;
+}
+
+.footer i {
+    color: #F4D03F;
+}
