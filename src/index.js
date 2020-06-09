@@ -16,6 +16,7 @@ class MyApp extends React.Component {
             initials: "",
             strTrim: "",
             camelCase: "",
+            kebabCase: "",
             strASCII: "",
             strHex: "",
             rot13: ""
@@ -49,6 +50,7 @@ class MyApp extends React.Component {
                 .join("");
         }
         let ceasarCipher = ROT13();
+        let kebab = inputStr.split(" ").map((word) => word.toLowerCase()).join("-");
         this.setState({
             inputVal: inputStr,
             strLength: inputStr.length,
@@ -60,6 +62,7 @@ class MyApp extends React.Component {
             initials: nameInitials,
             strTrim: inputStr.trim(),
             camelCase: camelCaseStr,
+            kebabCase: kebab,
             strASCII: asciiStr,
             strHex: hexStr,
             rot13: ceasarCipher   
@@ -77,6 +80,7 @@ class MyApp extends React.Component {
             initials: "",
             strTrim: "",
             camelCase: "",
+            kebabCase: "",
             strASCII: "",
             strHex: "",
             rot13: ""
@@ -87,7 +91,7 @@ class MyApp extends React.Component {
             <div>
                 <MyNavComponent />
                 <GetInputComponent input={this.state.inputVal} handleChange={this.handleChange} handleReset={this.handleReset} />
-                <RenderInputComponent input={this.state.inputVal} strLen={this.state.strLength} strLower={this.state.strLower} strUpper={this.state.strUpper} charOne={this.state.firstChar} charLast={this.state.lastChar} initials={this.state.initials} titleCase={this.state.titleCase} trimStr={this.state.strTrim} camelStr={this.state.camelCase} strAscii={this.state.strASCII} strHex={this.state.strHex} ceasarCipher={this.state.rot13} />
+                <RenderInputComponent input={this.state.inputVal} strLen={this.state.strLength} strLower={this.state.strLower} strUpper={this.state.strUpper} charOne={this.state.firstChar} charLast={this.state.lastChar} initials={this.state.initials} titleCase={this.state.titleCase} trimStr={this.state.strTrim} camelStr={this.state.camelCase} kebabStr={this.state.kebabCase} strAscii={this.state.strASCII} strHex={this.state.strHex} ceasarCipher={this.state.rot13} />
                 <MyFooterComponent />
             </div>
         );
@@ -166,6 +170,10 @@ class RenderInputComponent extends React.Component {
                         <tr>
                             <td>camelCase</td>
                             <td>{this.props.camelStr}</td>
+                        </tr>
+                        <tr>
+                            <td>kebab-case</td>
+                            <td>{this.props.kebabStr}</td>
                         </tr>
                         <tr>
                             <td>Ceasar Cipher</td>
