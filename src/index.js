@@ -106,7 +106,7 @@ class GetInputComponent extends React.Component {
         return (
             <div className="inputs">
                 <h2>String Variation Table</h2>
-                <p className="input-note">Watch out! There could be state, props or callback functions flying around behind the scenes <i className="fa fa-smile-o" aria-hidden="true" /></p>
+                <p className="input-note">Watch out! There could be state, props or callback functions flying around behind the scenes <i className="fa fa-smile-o" ariaHidden="true" /></p>
                 <div>
                     <input value={this.props.input} onChange={this.props.handleChange} id="input-field" placeholder="Enter string..." />
                     <button className="reset" onClick={this.props.handleReset}>Clear</button>
@@ -201,12 +201,12 @@ class MyNavComponent extends React.Component {
     render() {
         return (
             <div className="navbar">
-                <h1><a href="https://reactstrtable.netlify.app" aria-label="home page button">StrTable.io</a></h1>
+                <h1><a href="https://reactstrtable.netlify.app" ariaLabel="home page button">StrTable.io</a></h1>
                 <nav>
                     <ul>
-                        <li><a href="https://github.com/tannercd" target="_blank" rel="noopener noreferrer"><i className="fa fa-github" aria-label="github link"/></a></li>
-                        <li><a href="https://twitter.com/tannercd_" target="_blank" rel="noopener noreferrer"><i className="fa fa-twitter" aria-label="twitter link" /></a></li>
-                        <li><a href="https://codepen.io/spherical" target="_blank" rel="noopener noreferrer" aria-label="codepen link"><i className="fa fa-codepen" aria-hidden="false" /></a></li>
+                        <li><a href="https://github.com/tannercd" target="_blank" rel="noopener noreferrer"><i className="fa fa-github" ariaLabel="github link"/></a></li>
+                        <li><a href="https://twitter.com/tannercd_" target="_blank" rel="noopener noreferrer"><i className="fa fa-twitter" ariaLabel="twitter link" /></a></li>
+                        <li><a href="https://codepen.io/spherical" target="_blank" rel="noopener noreferrer" ariaLabel="codepen link"><i className="fa fa-codepen" ariaHidden="false" /></a></li>
                     </ul>
                 </nav>
             </div>
@@ -222,7 +222,7 @@ class MyFooterComponent extends React.Component {
         return (
             <div className="footer">
                 <h2>Built with React</h2><img width="30px" height="30px" src="logo192.png" alt="react logo"/>
-                <h2>Hosted with Netlify <i className="fa fa-bolt" aria-hidden="true" /></h2>
+                <h2>Hosted with Netlify <i className="fa fa-bolt" ariaHidden="true" /></h2>
             </div>
         );
     }
