@@ -1,6 +1,6 @@
 <img width="1240" alt="React app Table" src="https://user-images.githubusercontent.com/48612525/84092739-2dbcb680-a9ad-11ea-9359-73e7d0fe6412.png">
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/f02ad181-3a08-4549-b94e-e35889ae8f47/deploy-status)](https://app.netlify.com/sites/boring-curie-bf8a82/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f02ad181-3a08-4549-b94e-e35889ae8f47/deploy-status)](https://app.netlify.com/sites/reactstrtable/deploys)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
