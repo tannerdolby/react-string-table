@@ -18,7 +18,7 @@ html, body {
     margin: 0;
     padding: 0;
     min-height: 100%;
-    background-color: #222;
+    background-color: #fff;
 }
 
 .navbar {
@@ -29,19 +29,18 @@ html, body {
 
 .navbar h1 {
     margin: 10px;
-    color: #fff;
     font-family: var(--google-font-inconsolata);
 }
 
 .navbar h1 a {
-    color: #fff;
+    color: #000;
     text-decoration: none;
     border-bottom: 1px solid transparent;
     transition: 0.4s all ease-out;
 }
 
 .navbar h1 a:hover {
-    border-color: #fff;
+    border-color: #000;
 }
 
 .navbar nav ul {
@@ -55,11 +54,11 @@ html, body {
     padding-right: 15px;
     padding-left: 15px;
     font-size: 1.4rem;
-    color: #fff;
+    color: #000;
 }
 
 .navbar nav ul li a i:hover {
-    color: #aaa;
+    color: gray;
 }
 
 .inputs {
@@ -68,11 +67,10 @@ html, body {
     justify-content: center;
     align-items: center;
     margin-top: 30px;
-    color: #FFF;
 }
 
 .inputs h2 {
-    color: #FFF;
+    color: #000;
     font-size: 2rem;
     margin-bottom: 5px;
     text-transform: uppercase;
@@ -81,13 +79,13 @@ html, body {
 }
 
 .inputs .input-info {
-    color: #CCC;
+    color: #222;
     margin-top: 15px;
     margin-bottom: 10px;
 }
 
 .inputs .input-note {
-    color: #CCC;
+    color: #222;
     font-family: var(--google-font-crimson-text);
     font-size: 1.1rem;
 }
@@ -95,11 +93,12 @@ html, body {
 .inputs input {
     padding: 10px 10px;
     border-radius: 5px;
-    border: 2px solid #AAA;
+    border: 1.2px solid #333;
     margin: 20px;
     background: #FFF;
     color: #000;
     width: 250px;
+    font-size: 1.1rem;
 }
 
 .inputs div {
@@ -114,14 +113,16 @@ html, body {
     display: block;
     text-align: center;
     padding: 10px;
-    background: #333;
-    color: #FFF;
+    background: #fff;
+    color: #000;
     border: 1px solid #111;
+    border-radius: 5px;
+    font-size: 1rem;
 }
 
 .inputs div .reset:hover {
     cursor: pointer;
-    background: #444;
+    background: #eee;
 }
 
 .input-info {
@@ -151,7 +152,7 @@ html, body {
     padding: 13px;
     border: 1px solid #000;
     vertical-align: middle;
-    opacity: 0.7;
+    opacity: 0.9;
     font-size: 1.1rem;
 }
 
