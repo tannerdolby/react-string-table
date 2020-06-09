@@ -6,7 +6,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 # React String Table
-I created this string variation table originally with HTML, CSS and Vanilla JavaScript. Now this repository holds the converted React project. I was enjoying learning the fundamentals on [freeCodeCamp](https://freeCodeCamp.org) so I thought why not practice my React skills by converting a previous project entirely to React.
+I created this string variation table [previously](https://github.com/tannercd/stringtable-web) with only HTML, CSS and Vanilla JavaScript. Now this repository holds the converted React project. I was enjoying learning the fundamentals on [freeCodeCamp](https://freeCodeCamp.org) so I thought why not practice my React skills by converting a previous project entirely to React.
 
 ## Getting Started
 View the React string table app in action at: **https://reactstrtable.netlify.app**
