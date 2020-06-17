@@ -24,7 +24,6 @@ class MyApp extends React.Component {
         this.handleChange = this.handleChange.bind(this);
         this.handleReset = this.handleReset.bind(this);
     }
-    
     handleChange(event) {
         let inputStr = event.target.value;
         let charArr = inputStr.split(" ");
