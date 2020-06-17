@@ -98,9 +98,6 @@ class MyApp extends React.Component {
 }
 
 class GetInputComponent extends React.Component {
-    constructor(props) {
-        super(props);
-    }
     render() {
         return (
             <div className="inputs">
@@ -116,9 +113,6 @@ class GetInputComponent extends React.Component {
 }
 
 class RenderInputComponent extends React.Component {
-    constructor(props) {
-        super(props);
-    }
     render() {
         return (
             <div className="outputs">
@@ -194,9 +188,6 @@ class RenderInputComponent extends React.Component {
 }
 
 class MyNavComponent extends React.Component {
-    constructor(props) {
-        super(props);
-    }
     render() {
         return (
             <div className="navbar">
@@ -214,9 +205,6 @@ class MyNavComponent extends React.Component {
 }
 
 class MyFooterComponent extends React.Component {
-    constructor(props) {
-        super(props);
-    }
     render() {
         return (
             <div className="footer">
