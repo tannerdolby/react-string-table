@@ -6,20 +6,10 @@
 # React String Table
 I created this string variation table [previously](https://github.com/tannercd/stringtable-web) using HTML, CSS and Vanilla JavaScript. Now this repository holds the converted React project. 
 
-I enjoyed learning the fundamentals of React on [freeCodeCamp](https://freeCodeCamp.org), so I thought why not practice my React skills by converting a previous project entirely to React! I also became familiar with deploying my production build React App to Netlify.
+I enjoyed learning the fundamentals of React on [freeCodeCamp](https://freeCodeCamp.org), so I thought why not practice my React skills by converting a previous project entirely to React!
 
 ## Getting Started
 View the React string table app in action at: **https://reactstrtable.netlify.app**
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://github.com/tannercd/typescript-pokedex/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Authors
 
