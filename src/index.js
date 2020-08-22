@@ -137,7 +137,7 @@ class RenderInputComponent extends React.Component {
                             <td>{this.props.strLower}</td>
                         </tr>
                         <tr>
-                            <td>UpperCase</td>
+                            <td>Uppercase</td>
                             <td>{this.props.strUpper}</td>
                         </tr>
                         <tr>
