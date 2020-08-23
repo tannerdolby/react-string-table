@@ -208,8 +208,8 @@ class MyFooterComponent extends React.Component {
     render() {
         return (
             <div className="footer">
-                <h2>Built with React</h2><img width="30px" height="30px" src="logo192.png" alt="react logo"/>
-                <h2>Hosted with Netlify <i className="fa fa-bolt" aria-hidden="true" /></h2>
+                <h2>Built with React.</h2>
+                <h2>Hosted on Netlify.</h2>
             </div>
         );
     }
