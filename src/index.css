@@ -32,7 +32,7 @@ html, body {
     padding-left: 1rem;
     padding-right: 1rem;
     background: #fff;
-    border-bottom: 1px solid lightgray;
+    max-width: 1100px;
 }
 
 .navbar h1 {
@@ -76,8 +76,8 @@ html, body {
     align-items: center;
     margin-left: auto;
     margin-right: auto; 
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .inputs h2 {
@@ -118,8 +118,12 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    max-width: 800px;
+    width: 100%;
 }
 
 .inputs div .reset {
@@ -150,8 +154,8 @@ html, body {
     font-family: var(--google-font-source-sans-pro);
     margin-left: auto;
     margin-right: auto; 
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .outputs table {
