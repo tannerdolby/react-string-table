@@ -191,7 +191,7 @@ class MyNavComponent extends React.Component {
     render() {
         return (
             <div className="navbar">
-                <h1><a href="https://reactstrtable.netlify.app" aria-label="home page button">StrTable.io</a></h1>
+                <h1><a href="https://reactstrtable.netlify.app" aria-label="home page button">Home</a></h1>
                 <nav>
                     <ul>
                         <li><a href="https://github.com/tannerdolby" target="_blank" rel="noopener noreferrer"><i className="fa fa-github" aria-label="github link"/></a></li>
@@ -208,7 +208,7 @@ class MyFooterComponent extends React.Component {
     render() {
         return (
             <div className="footer">
-                <h2>Built with React and hosted on Netlify.</h2>
+                <h2>Built with React and hosted on Netlify. Created by <a href="https://github.com/tannerdolby" rel="noopener noreferrer" target="_blank">Tanner Dolby</a>.</h2>
             </div>
         );
     }
