@@ -13,7 +13,7 @@ View the React string table app in action at: **https://reactstrtable.netlify.ap
 
 ## Authors
 
-* **Tanner Dolby** - *Initial work* - [@tannercd](https://github.com/tannercd)
+* **Tanner Dolby** - *Initial work* - [@tannerdolby](https://github.com/tannerdolby)
 
 ## License
 
