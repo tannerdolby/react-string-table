@@ -104,7 +104,7 @@ class GetInputComponent extends React.Component {
                 <h2>String Variation Table</h2>
                 {/* <p className="input-note">Watch out! There could be state, props or callback functions flying around behind the scenes <i className="fa fa-smile-o" aria-hidden="true" /></p> */}
                 <div>
-                    <input value={this.props.input} onChange={this.props.handleChange} id="input-field" placeholder="Enter string..." />
+                    <input aria-label="Enter a string into the input box" value={this.props.input} onChange={this.props.handleChange} id="input-field" placeholder="Enter string..." />
                     <button className="reset" onClick={this.props.handleReset}>Clear</button>
                 </div>
             </div>
@@ -191,12 +191,12 @@ class MyNavComponent extends React.Component {
     render() {
         return (
             <div className="navbar">
-                <h1><a href="https://reactstrtable.netlify.app" aria-label="home page button">Home</a></h1>
+                <h1><a href="https://reactstrtable.netlify.app">Home</a></h1>
                 <nav>
                     <ul>
-                        <li><a href="https://github.com/tannerdolby" target="_blank" rel="noopener noreferrer"><i className="fa fa-github" aria-label="github link"/></a></li>
-                        <li><a href="https://twitter.com/tannerdolby" target="_blank" rel="noopener noreferrer"><i className="fa fa-twitter" aria-label="twitter link" /></a></li>
-                        <li><a href="https://codepen.io/tannerdolby" target="_blank" rel="noopener noreferrer" aria-label="codepen link"><i className="fa fa-codepen" aria-hidden="false" /></a></li>
+                        <li><a href="https://github.com/tannerdolby" target="_blank" rel="noopener noreferrer" aria-label="Link to my Github"><i className="fa fa-github" aria-hidden="true" /></a></li>
+                        <li><a href="https://twitter.com/tannerdolby" target="_blank" rel="noopener noreferrer" aria-label="Link to my Twitter"><i className="fa fa-twitter" aria-hidden="true" /></a></li>
+                        <li><a href="https://codepen.io/tannerdolby" target="_blank" rel="noopener noreferrer" aria-label="Link to my CodePen"><i className="fa fa-codepen" aria-hidden="true" /></a></li>
                     </ul>
                 </nav>
             </div>
