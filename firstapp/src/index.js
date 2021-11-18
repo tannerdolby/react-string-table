@@ -2,18 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-class Square extends React.Component {
-//passing props
-  render() {
-    return (
-      //event handler for Square component using onClick prop (setting state to 'X' if clicked)
-      //className prop and onClick props on separate lines for readibility
-      <button className="square"
-      onClick={() => this.props.onClick()}>
-        {this.props.value}
-      </button>
-    );
-  }
+function Square(props) {
+  return (
+    <button className="square" onClick={props.onClick}>
+      {props.value}
+    </button>
+  );
 }
 //adding a constructor to Board and setting the boards initial state
 //to contain an array of 12 nulls corresponding to each square
@@ -22,19 +16,23 @@ constructor(props) {
     super(props);
     this.state = {
       squares: Array(12).fill(null),
+      xIsNext: true,
     };
   }
   handleClick(i) {
     const squares = this.state.squares.slice();
-    squares[i] = 'X';
-    this.setState({squares: squares})
+    squares[i] = this.state.xIsNext ? 'X': 'O';
+    this.setState({
+      squares: squares,
+      xIsNext: !this.state.xIsNext,
+    });
   }
   renderSquare(i) {
     return <Square value={this.state.squares[i]}
     onClick={() => this.handleClick(i)} />;
   }
   render() {
-    const status = 'Next player: X';
+    const status = 'Next player: ' + (this.state.xIsNext ? 'X': 'O');
 
     return (
       <div>
