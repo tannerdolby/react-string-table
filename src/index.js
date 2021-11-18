@@ -194,7 +194,7 @@ class MyNavComponent extends React.Component {
                 <h1><a href="https://reactstrtable.netlify.app">Home</a></h1>
                 <nav>
                     <ul>
-                        <li><a href="https://github.com/tannerdolby" target="_blank" rel="noopener noreferrer" aria-label="Link to my Github"><i className="fa fa-github" aria-hidden="false" title="Github icon button"/></a></li>
+                        <li><a href="https://github.com/tannerdolby/react-string-table" target="_blank" rel="noopener noreferrer" aria-label="Link to repository on GitHub"><i className="fa fa-github" aria-hidden="false" title="Github icon button"/></a></li>
                         <li><a href="https://twitter.com/tannerdolby" target="_blank" rel="noopener noreferrer" aria-label="Link to my Twitter"><i className="fa fa-twitter" aria-hidden="false" title="Twitter icon button"/></a></li>
                         <li><a href="https://codepen.io/tannerdolby" target="_blank" rel="noopener noreferrer" aria-label="Link to my CodePen"><i className="fa fa-codepen" aria-hidden="false" title="CodePen icon button"/></a></li>
                     </ul>
