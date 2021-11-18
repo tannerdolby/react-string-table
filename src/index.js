@@ -169,7 +169,7 @@ class RenderInputComponent extends React.Component {
                             <td>{this.props.kebabStr}</td>
                         </tr>
                         <tr>
-                            <td>Ceasar Cipher</td>
+                            <td>Caesar Cipher</td>
                             <td>{this.props.ceasarCipher}</td>
                         </tr>
                         <tr>
