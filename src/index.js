@@ -38,13 +38,18 @@ class MyApp extends React.Component {
         let asciiStr = inputStr.split("").map((char) => char.charCodeAt(0)).join(" "); // converting to unicode
         let hexStr = inputStr.split("").map((char) => char.charCodeAt(0).toString(16)).join(" ");
         let ROT13 = () => {
-            let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            let newChar = "";
             return inputStr
-                .toUpperCase()
                 .split("")
                 .map((letter) => {
-                    let char = alphabet.indexOf(letter);
-                    return char >= 0 ? alphabet[(char + 13) % 26] : "";
+                    let char = alphabet.indexOf(letter.toUpperCase());
+                    newChar =  alphabet[(char + 13) % 26];
+
+                    if (letter === letter.toLowerCase()) newChar = newChar.toLowerCase();
+                    if (letter === letter.toUpperCase()) newChar = newChar.toUpperCase();
+
+                    return char >= 0 ? newChar : "";
                 })
                 .join("");
         }
