@@ -53,8 +53,7 @@ class MyApp extends React.Component {
                 })
                 .join("");
         }
-        let ceasarCipher = ROT13();
-        let kebab = inputStr.split(" ").map((word) => word.toLowerCase()).join("-");
+
         this.setState({
             inputVal: inputStr,
             strLength: inputStr.length,
@@ -66,10 +65,10 @@ class MyApp extends React.Component {
             initials: nameInitials,
             strTrim: inputStr.trim(),
             camelCase: camelCaseStr,
-            kebabCase: kebab,
+            kebabCase: inputStr.split(" ").map((word) => word.toLowerCase()).join("-"),
             strASCII: asciiStr,
             strHex: hexStr,
-            rot13: ceasarCipher   
+            rot13: ROT13()  
         });
     }
     handleReset() {
