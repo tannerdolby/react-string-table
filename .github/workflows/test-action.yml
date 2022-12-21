@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: Echo some stuff
         run: |
-          echo $AVOCADO_SEED_NAME
-          echo ${{ env.SEED_NAME }}
-          echo ${{ secrets.AVOCADO_SEED_NAME }}
+          echo 1 $AVOCADO_SEED_NAME
+          echo 2 ${{ env.SEED_NAME }}
+          echo 3 ${{ secrets.AVOCADO_SEED_NAME }}
     
