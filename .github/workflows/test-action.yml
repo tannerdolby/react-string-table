@@ -1,11 +1,6 @@
 name: Test Action
 
-on:
-  pull_request:
-    types:
-      - opened
-    branches:
-      - master
+on: pull_request
 
 env:
   SEED_NAME: ${{ secrets.AVOCADO_SEED_NAME }}
@@ -14,7 +9,7 @@ jobs:
   dependabot:
     runs-on: ubuntu-latest
     name: Dependabot Testing
-    if: ${{ github.actor == 'dependabot[bot]' }}
+    if: ${{ github.event.pull_request.user.login == 'dependabot[bot]' }}
     steps:
       - name: Echo some stuff
         run: |
