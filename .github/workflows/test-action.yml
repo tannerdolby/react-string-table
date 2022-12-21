@@ -1,0 +1,24 @@
+name: Test Action
+
+on:
+  pull_request:
+    types:
+      - opened
+    branches:
+      - master
+
+env:
+  SEED_NAME: ${{ secrets.AVOCADO_SEED_NAME }}
+
+jobs:
+  dependabot:
+    runs-on: ubuntu-latest
+    name: Dependabot Testing
+    if: ${{ github.actor === 'dependabot[bot]' }}
+    steps:
+      - name: Echo some stuff
+        run: |
+          echo $AVOCADO_SEED_NAME
+          echo ${{ env.SEED_NAME }}
+          echo ${{ secrets.AVOCADO_SEED_NAME }}
+    
