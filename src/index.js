@@ -1,94 +1,76 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {caesarCipher} from 'rotation-cipher';
 import './index.css';
 
 class MyApp extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            inputVal: "",
-            strLen: null,
-            strLower: "",
-            strUpper: "",
-            firstChar: "",
-            lastChar: "",
-            titleCase: "",
-            initials: "",
-            strTrim: "",
-            camelCase: "",
-            kebabCase: "",
-            strASCII: "",
-            strHex: "",
-            rot13: ""
+            inputVal: '',
+            strLen: '',
+            strLower: '',
+            strUpper: '',
+            firstChar: '',
+            lastChar: '',
+            titleCase: '',
+            initials: '',
+            strTrim: '',
+            camelCase: '',
+            kebabCase: '',
+            strASCII: '',
+            strHex: '',
+            rot13: ''
         }
         this.handleChange = this.handleChange.bind(this);
         this.handleReset = this.handleReset.bind(this);
     }
     handleChange(event) {
-        let inputStr = event.target.value;
-        let charArr = inputStr.split(" ");
-        let nameInitials = charArr.map((word) => word.charAt(0).toUpperCase());
-        let titleCased = charArr.map((word) => word.charAt(0).toUpperCase().concat(word.slice(1).toLowerCase())).join(" ");
-        let camelCaseStr = charArr.map((word, index) => {
+        const input = event.target.value;
+        const chars = input.split(' ');
+        let camelCaseStr = chars.map((word, index) => {
             if (index === 0) {
                 return word.toLowerCase();
             }
             return word.charAt(0).toUpperCase().concat(word.slice(1).toLowerCase());
         });
-        let asciiStr = inputStr.split("").map((char) => char.charCodeAt(0)).join(" "); // converting to unicode
-        let hexStr = inputStr.split("").map((char) => char.charCodeAt(0).toString(16)).join(" ");
-        let ROT13 = () => {
-            let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-            let newChar = "";
-            return inputStr
-                .split("")
-                .map((letter) => {
-                    let char = alphabet.indexOf(letter.toUpperCase());
-                    newChar =  alphabet[(char + 13) % 26];
-
-                    if (letter === letter.toLowerCase()) newChar = newChar.toLowerCase();
-                    if (letter === letter.toUpperCase()) newChar = newChar.toUpperCase();
-
-                    return char >= 0 ? newChar : "";
-                })
-                .join("");
-        }
 
         this.setState({
-            inputVal: inputStr,
-            strLength: inputStr.length,
-            strLower: inputStr.toLowerCase(),
-            strUpper: inputStr.toUpperCase(),
-            firstChar: inputStr.charAt(0),
-            lastChar: inputStr.charAt(inputStr.length - 1),
-            titleCase: titleCased,
-            initials: nameInitials,
-            strTrim: inputStr.trim(),
+            inputVal: input,
+            strLength: input.length,
+            strLower: input.toLowerCase(),
+            strUpper: input.toUpperCase(),
+            firstChar: input.charAt(0),
+            lastChar: input.charAt(input.length - 1),
+            titleCase: chars.map((word) => word.charAt(0).toUpperCase().concat(word.slice(1).toLowerCase())).join(' '),
+            initials: chars.map((word) => word.charAt(0).toUpperCase()),
+            strTrim: input.trim(),
             camelCase: camelCaseStr,
-            kebabCase: inputStr.split(" ").map((word) => word.toLowerCase()).join("-"),
-            strASCII: asciiStr,
-            strHex: hexStr,
-            rot13: ROT13()  
+            kebabCase: input.split(' ').map((word) => word.toLowerCase()).join('-'),
+            strASCII: input.split('').map((char) => char.charCodeAt(0)).join(' '),
+            strHex: input.split('').map((char) => char.charCodeAt(0).toString(16)).join(' '),
+            rot13: caesarCipher(input)  
         });
     }
     handleReset() {
         this.setState({
-            inputVal: "",
-            strLength: null,
-            strLower: "",
-            strUpper: "",
-            firstChar: "",
-            lastChar: "",
-            titleCase: "",
-            initials: "",
-            strTrim: "",
-            camelCase: "",
-            kebabCase: "",
-            strASCII: "",
-            strHex: "",
-            rot13: ""
+            inputVal: '',
+            strLength: '',
+            strLower: '',
+            strUpper: '',
+            firstChar: '',
+            lastChar: '',
+            titleCase: '',
+            initials: '',
+            strTrim: '',
+            camelCase: '',
+            kebabCase: '',
+            strASCII: '',
+            strHex: '',
+            rot13: ''
         });
     }
+
     render() {
         return (
             <div>
@@ -104,12 +86,11 @@ class MyApp extends React.Component {
 class GetInputComponent extends React.Component {
     render() {
         return (
-            <div className="inputs">
+            <div className='inputs'>
                 <h2>String Variation Table</h2>
-                {/* <p className="input-note">Watch out! There could be state, props or callback functions flying around behind the scenes <i className="fa fa-smile-o" aria-hidden="true" /></p> */}
                 <div>
-                    <input aria-label="Enter a string into the input box" value={this.props.input} onChange={this.props.handleChange} id="input-field" placeholder="Enter string..." />
-                    <button className="reset" onClick={this.props.handleReset}>Clear</button>
+                    <input aria-label='Enter a string into the input box' value={this.props.input} onChange={this.props.handleChange} id='input-field' placeholder='Enter string...' />
+                    <button className='reset' onClick={this.props.handleReset}>Clear</button>
                 </div>
             </div>
         );
@@ -119,11 +100,11 @@ class GetInputComponent extends React.Component {
 class RenderInputComponent extends React.Component {
     render() {
         return (
-            <div className="outputs">
+            <div className='outputs'>
                 <table>
                     <thead>
                         <tr>
-                            <th width="190px">String Variation</th>
+                            <th width='190px'>String Variation</th>
                             <th>Result</th>
                         </tr>
                     </thead>
@@ -194,13 +175,13 @@ class RenderInputComponent extends React.Component {
 class MyNavComponent extends React.Component {
     render() {
         return (
-            <div className="navbar">
-                <h1><a href="https://reactstrtable.netlify.app">Home</a></h1>
+            <div className='navbar'>
+                <h1><a href='https://reactstrtable.netlify.app'>Home</a></h1>
                 <nav>
                     <ul>
-                        <li><a href="https://github.com/tannerdolby/react-string-table" target="_blank" rel="noopener noreferrer" aria-label="Link to repository on GitHub"><i className="fa fa-github" aria-hidden="false" title="Github icon button"/></a></li>
-                        <li><a href="https://twitter.com/tannerdolby" target="_blank" rel="noopener noreferrer" aria-label="Link to my Twitter"><i className="fa fa-twitter" aria-hidden="false" title="Twitter icon button"/></a></li>
-                        <li><a href="https://codepen.io/tannerdolby" target="_blank" rel="noopener noreferrer" aria-label="Link to my CodePen"><i className="fa fa-codepen" aria-hidden="false" title="CodePen icon button"/></a></li>
+                        <li><a href='https://github.com/tannerdolby/react-string-table' target='_blank' rel='noopener noreferrer' aria-label='Link to repository on GitHub'><i className='fa fa-github' aria-hidden='false' title='Github icon button'/></a></li>
+                        <li><a href='https://twitter.com/tannerdolby' target='_blank' rel='noopener noreferrer' aria-label='Link to my Twitter'><i className='fa fa-twitter' aria-hidden='false' title='Twitter icon button'/></a></li>
+                        <li><a href='https://codepen.io/tannerdolby' target='_blank' rel='noopener noreferrer' aria-label='Link to my CodePen'><i className='fa fa-codepen' aria-hidden='false' title='CodePen icon button'/></a></li>
                     </ul>
                 </nav>
             </div>
@@ -211,11 +192,11 @@ class MyNavComponent extends React.Component {
 class MyFooterComponent extends React.Component {
     render() {
         return (
-            <div className="footer">
-                <h2>Built with React and hosted on Netlify. Created by <a href="https://github.com/tannerdolby" rel="noopener noreferrer" target="_blank">Tanner Dolby</a>.</h2>
+            <div className='footer'>
+                <h2>Built with React and hosted on Netlify. Created by <a href='https://github.com/tannerdolby' rel='noopener noreferrer' target='_blank'>Tanner Dolby</a>.</h2>
             </div>
         );
     }
 }
 
-ReactDOM.render(<MyApp />, document.getElementById("root"));
+ReactDOM.render(<MyApp />, document.getElementById('root'));

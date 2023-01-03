@@ -9,11 +9,5 @@ I enjoyed learning the fundamentals of React on [freeCodeCamp](https://freeCodeC
 ## Getting Started
 View the React string table app in action at: **https://reactstrtable.netlify.app**
 
-## Authors
-
-* **Tanner Dolby** - *Initial work* - [@tannerdolby](https://github.com/tannerdolby)
-
 ## License
-
 This project is free for public and open-source use.
-
