@@ -189,14 +189,12 @@ class MyNavComponent extends React.Component {
     }
 }
 
-class MyFooterComponent extends React.Component {
-    render() {
-        return (
-            <div className='footer'>
-                <h2>Built with React and hosted on Netlify. Created by <a href='https://github.com/tannerdolby' rel='noopener noreferrer' target='_blank'>Tanner Dolby</a>.</h2>
-            </div>
-        );
-    }
+function MyFooterComponent() {
+    return (
+        <div className='footer'>
+            <h2>Built with React and hosted on Netlify. Created by <a href='https://github.com/tannerdolby' rel='noopener noreferrer' target='_blank'>Tanner Dolby</a>.</h2>
+        </div>
+    );
 }
 
 ReactDOM.render(<MyApp />, document.getElementById('root'));
