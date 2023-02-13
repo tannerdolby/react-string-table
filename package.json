@@ -6,16 +6,18 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "prettier": "^2.8.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "^5.0.1",
-    "rotation-cipher": "^1.2.0"
+    "rotation-cipher": "^1.2.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "format": "npx prettier --write ./src/index.js"
   },
   "engines": {
     "node": ">=16"

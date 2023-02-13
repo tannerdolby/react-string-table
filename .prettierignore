@@ -1,0 +1,12 @@
+
+
+# Ignore artifacts:
+build
+coverage
+dist
+
+# Ignore package-lock
+package-lock.json
+
+# Babel
+babel.*

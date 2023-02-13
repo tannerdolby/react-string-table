@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {caesarCipher} from 'rotation-cipher';
+import { caesarCipher, randomRotation } from 'rotation-cipher';
 import './index.css';
 
 class MyApp extends React.Component {
@@ -20,8 +20,9 @@ class MyApp extends React.Component {
             kebabCase: '',
             strASCII: '',
             strHex: '',
-            rot13: ''
-        }
+            rot13: '',
+            randomRotation: '',
+        };
         this.handleChange = this.handleChange.bind(this);
         this.handleReset = this.handleReset.bind(this);
     }
@@ -42,14 +43,28 @@ class MyApp extends React.Component {
             strUpper: input.toUpperCase(),
             firstChar: input.charAt(0),
             lastChar: input.charAt(input.length - 1),
-            titleCase: chars.map((word) => word.charAt(0).toUpperCase().concat(word.slice(1).toLowerCase())).join(' '),
+            titleCase: chars
+                .map((word) =>
+                    word.charAt(0).toUpperCase().concat(word.slice(1).toLowerCase())
+                )
+                .join(' '),
             initials: chars.map((word) => word.charAt(0).toUpperCase()),
             strTrim: input.trim(),
             camelCase: camelCaseStr,
-            kebabCase: input.split(' ').map((word) => word.toLowerCase()).join('-'),
-            strASCII: input.split('').map((char) => char.charCodeAt(0)).join(' '),
-            strHex: input.split('').map((char) => char.charCodeAt(0).toString(16)).join(' '),
-            rot13: caesarCipher(input)  
+            kebabCase: input
+                .split(' ')
+                .map((word) => word.toLowerCase())
+                .join('-'),
+            strASCII: input
+                .split('')
+                .map((char) => char.charCodeAt(0))
+                .join(' '),
+            strHex: input
+                .split('')
+                .map((char) => char.charCodeAt(0).toString(16))
+                .join(' '),
+            rot13: caesarCipher(input),
+            randomCipher: caesarCipher(input, 0, randomRotation(input)),
         });
     }
     handleReset() {
@@ -67,16 +82,36 @@ class MyApp extends React.Component {
             kebabCase: '',
             strASCII: '',
             strHex: '',
-            rot13: ''
+            rot13: '',
+            randomCipher: '',
         });
     }
 
     render() {
         return (
             <div>
-                <MyNavComponent />
-                <GetInputComponent input={this.state.inputVal} handleChange={this.handleChange} handleReset={this.handleReset} />
-                <RenderInputComponent input={this.state.inputVal} strLen={this.state.strLength} strLower={this.state.strLower} strUpper={this.state.strUpper} charOne={this.state.firstChar} charLast={this.state.lastChar} initials={this.state.initials} titleCase={this.state.titleCase} trimStr={this.state.strTrim} camelStr={this.state.camelCase} kebabStr={this.state.kebabCase} strAscii={this.state.strASCII} strHex={this.state.strHex} ceasarCipher={this.state.rot13} />
+                <GetInputComponent
+                    input={this.state.inputVal}
+                    handleChange={this.handleChange}
+                    handleReset={this.handleReset}
+                />
+                <RenderInputComponent
+                    input={this.state.inputVal}
+                    strLen={this.state.strLength}
+                    strLower={this.state.strLower}
+                    strUpper={this.state.strUpper}
+                    charOne={this.state.firstChar}
+                    charLast={this.state.lastChar}
+                    initials={this.state.initials}
+                    titleCase={this.state.titleCase}
+                    trimStr={this.state.strTrim}
+                    camelStr={this.state.camelCase}
+                    kebabStr={this.state.kebabCase}
+                    strAscii={this.state.strASCII}
+                    strHex={this.state.strHex}
+                    ceasarCipher={this.state.rot13}
+                    randomCipher={this.state.randomCipher}
+                />
                 <MyFooterComponent />
             </div>
         );
@@ -86,11 +121,19 @@ class MyApp extends React.Component {
 class GetInputComponent extends React.Component {
     render() {
         return (
-            <div className='inputs'>
+            <div className="inputs">
                 <h2>String Variation Table</h2>
                 <div>
-                    <input aria-label='Enter a string into the input box' value={this.props.input} onChange={this.props.handleChange} id='input-field' placeholder='Enter string...' />
-                    <button className='reset' onClick={this.props.handleReset}>Clear</button>
+                    <input
+                        aria-label="Enter a string into the input box"
+                        value={this.props.input}
+                        onChange={this.props.handleChange}
+                        id="input-field"
+                        placeholder="Enter string..."
+                    />
+                    <button className="reset" onClick={this.props.handleReset}>
+                        Clear
+                    </button>
                 </div>
             </div>
         );
@@ -100,11 +143,11 @@ class GetInputComponent extends React.Component {
 class RenderInputComponent extends React.Component {
     render() {
         return (
-            <div className='outputs'>
+            <div className="outputs">
                 <table>
                     <thead>
                         <tr>
-                            <th width='190px'>String Variation</th>
+                            <th width="190px">String Variation</th>
                             <th>Result</th>
                         </tr>
                     </thead>
@@ -158,6 +201,10 @@ class RenderInputComponent extends React.Component {
                             <td>{this.props.ceasarCipher}</td>
                         </tr>
                         <tr>
+                            <td>Random Cipher</td>
+                            <td>{this.props.randomCipher}</td>
+                        </tr>
+                        <tr>
                             <td>Decimal ASCII</td>
                             <td>{this.props.strAscii}</td>
                         </tr>
@@ -172,27 +219,56 @@ class RenderInputComponent extends React.Component {
     }
 }
 
-class MyNavComponent extends React.Component {
-    render() {
-        return (
-            <div className='navbar'>
-                <h1><a href='https://reactstrtable.netlify.app'>Home</a></h1>
-                <nav>
-                    <ul>
-                        <li><a href='https://github.com/tannerdolby/react-string-table' target='_blank' rel='noopener noreferrer' aria-label='Link to repository on GitHub'><i className='fa fa-github' aria-hidden='false' title='Github icon button'/></a></li>
-                        <li><a href='https://twitter.com/tannerdolby' target='_blank' rel='noopener noreferrer' aria-label='Link to my Twitter'><i className='fa fa-twitter' aria-hidden='false' title='Twitter icon button'/></a></li>
-                        <li><a href='https://codepen.io/tannerdolby' target='_blank' rel='noopener noreferrer' aria-label='Link to my CodePen'><i className='fa fa-codepen' aria-hidden='false' title='CodePen icon button'/></a></li>
-                    </ul>
-                </nav>
-            </div>
-        )
-    }
-}
-
 function MyFooterComponent() {
     return (
-        <div className='footer'>
-            <h2>Built with React and hosted on Netlify. Created by <a href='https://github.com/tannerdolby' rel='noopener noreferrer' target='_blank'>Tanner Dolby</a>.</h2>
+        <div className="footer">
+            <h2>Built with React and hosted on Netlify</h2>
+            <div className="navbar">
+                <ul>
+                    <li>
+                        <a
+                            href="https://github.com/tannerdolby/react-string-table"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Link to repository on GitHub"
+                        >
+                            <i
+                                className="fa fa-github"
+                                aria-hidden="false"
+                                title="Github icon button"
+                            />
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://twitter.com/tannerdolby"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Link to my Twitter"
+                        >
+                            <i
+                                className="fa fa-twitter"
+                                aria-hidden="false"
+                                title="Twitter icon button"
+                            />
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://codepen.io/tannerdolby"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Link to my CodePen"
+                        >
+                            <i
+                                className="fa fa-codepen"
+                                aria-hidden="false"
+                                title="CodePen icon button"
+                            />
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     );
 }
