@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --google-font-source-sans-pro: "Source Sans Pro", sans-serif;
+    --google-font-metal-mania: "Metal Mania", sans-serif;
+    --google-font-arimo: "Arimo", sans-serif;
+    --google-font-crimson-text: "Crimson Text", sans-serif;
+    --google-font-inconsolata: "Inconsolata", sans-serif;
+    --system-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    background-color: #fff;
+    scroll-behavior: smooth;
+    font-family: var(--system-font);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background: #fff;
+    max-width: 1100px;
+}
+
+.navbar h1 {
+    margin-top: 1rem;
+    font-family: var(--system-font);
+    font-size: 1.5em;
+}
+
+.navbar h1 a {
+    color: #000;
+    text-decoration: none;
+}
+
+.navbar h1 a:hover {
+    cursor: pointer;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 0;
+}
+
+.navbar ul li a i {
+    padding-right: 15px;
+    padding-left: 15px;
+    font-size: 1.4rem;
+    color: #222;
+}
+
+.navbar ul li a i:hover {
+    cursor: pointer;
+    color: #111;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto; 
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.header h2 {
+    color: #000;
+    font-size: 3rem;
+    margin-top: 4rem;
+    margin-bottom: .75rem;
+    padding: 5px;
+    font-family: var(--system-font);
+    text-align: center;
+}
+
+.header .input-info {
+    color: #222;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.header .input-note {
+    color: #222;
+    font-family: var(--google-font-crimson-text);
+    font-size: 1.1rem;
+}
+
+.header input {
+    padding: .75rem .5rem;
+    border-radius: 5px;
+    border: 1px solid #212121;
+    background: #FFF;
+    color: #000;
+    width: 250px;
+    font-size: 1rem;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.header .user-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+    max-width: 800px;
+    width: fit-content;
+}
+
+.header .reset-btn {
+    display: block;
+    text-align: center;
+    padding: .75rem .5rem;
+    height: 100%;
+    font-size: 1rem;
+    background: #212121;
+    color: #fff;
+    border: 1px solid #212121;
+}
+
+.header div .reset-btn:hover {
+    cursor: pointer;
+    background: #000;
+}
+
+.input-info {
+    font-size: 1.3rem;
+}
+
+.string-table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--google-font-source-sans-pro);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: .5rem;
+}
+
+table {
+    border-collapse: collapse;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-bottom: 40px;
+    width: 100%;
+    margin: 0 auto 40px;
+    max-width: 800px;
+    border-radius: .5rem;
+}
+
+.string-table table th {
+    padding: 13px;
+    border: 1px solid lightgray;
+    vertical-align: middle;
+    opacity: 0.9;
+    font-size: 1.1rem;
+    background: #EFEFEF;
+    background: #DFE4E8;
+    background: #E9EBEC;
+    background: #EDEFF1;
+}
+
+.string-table table td {
+    text-align: center;
+    border: 1px solid lightgray;
+    padding: 9px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin: 15px; */
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.footer h2 {
+    /* font-family: var(--google-font-inconsolata); */
+    font-family: var(--system-font);
+    margin: 10px;
+    padding-left: 10px;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.footer h2 a {
+    color: #333;
+    text-decoration: none;
+}
+
+.footer h2 a:hover {
+    background: #444;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: underline;
+}
