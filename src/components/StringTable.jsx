@@ -1,6 +1,6 @@
-import Header from './Header.jsx';
-import Table from './Table.jsx';
-import Footer from './Footer.jsx';
+import Header from './Header';
+import Table from './Table';
+import Footer from './Footer';
 import { useState } from 'react';
 import { caesarCipher, randomRotation } from 'rotation-cipher';
 
