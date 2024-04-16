@@ -1,4 +1,4 @@
-const Table = ({data}) => {
+export default function Table({data}) {
   if (!data || Object.keys(data) === 0) {
     throw new Error('Table requires `data`');
   }
@@ -66,5 +66,3 @@ const Row = ({ label, data }) => {
     </tr>
   );
 }
-
-export default Table;

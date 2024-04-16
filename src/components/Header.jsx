@@ -1,9 +1,9 @@
-const Header = ({ input, handleReset, handleChange }) => {
+export default function Header({ input, handleReset, handleChange }) {
   return (
     <div className="header">
       <h2>String Variation Table</h2>
       <div className="user-input">
-        <input
+        <textarea
           aria-label="Enter a string into the input box"
           value={input}
           onChange={handleChange}
@@ -17,5 +17,3 @@ const Header = ({ input, handleReset, handleChange }) => {
     </div>
   );
 }
-
-export default Header;

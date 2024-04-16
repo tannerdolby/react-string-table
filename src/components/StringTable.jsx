@@ -1,10 +1,10 @@
-import Header from '../ui/Header';
-import Table from '../ui/Table';
-import Footer from '../ui/Footer';
+import Header from './Header.jsx';
+import Table from './Table.jsx';
+import Footer from './Footer.jsx';
 import { useState } from 'react';
 import { caesarCipher, randomRotation } from 'rotation-cipher';
 
-const App = () => {
+export default function StringTable() {
   const [data, setData] = useState({
     input: '',
     length: 0,
@@ -124,5 +124,3 @@ const titleCase = (words) => {
       .concat(word.slice(1).toLocaleLowerCase()))
       .join(' ');
 }
-
-export default App;

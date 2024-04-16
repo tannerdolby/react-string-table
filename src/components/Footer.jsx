@@ -2,27 +2,27 @@ const navLinkData = [
   {
     url: 'https://github.com/tannerdolby/react-string-table',
     ariaLabel: 'Link to repository on GitHub',
-    iconTooltip: 'Github icon button',
+    iconTooltip: 'GitHub link',
     iconClass: 'fa-github',
   },
   {
     url: 'https://twitter.com/tannerdolby',
     ariaLabel: 'Link to my Twitter',
-    iconTooltip: 'Twitter icon button',
+    iconTooltip: 'Twitter link',
     iconClass: 'fa-twitter',
   },
   {
     url: 'https://codepen.io/tannerdolby',
     ariaLabel: 'Link to my CodePen',
-    iconTooltip: 'CodePen icon button',
+    iconTooltip: 'CodePen link',
     iconClass: 'fa-codepen'
   },
 ];
 
-const Footer = () => {
+export default function Footer() {
   return (
     <div className="footer">
-      <h2>Built with React and hosted on Netlify</h2>
+      <p>Created by tannerdolby</p>
       <div className="navbar">
         <ul>
           {navLinkData.map((item, i) => {
@@ -60,5 +60,3 @@ const Item = ({url, ariaLabel, iconClass, iconTooltip}) => {
     </li>
   )
 }
-
-export default Footer;
