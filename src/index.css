@@ -184,6 +184,9 @@ html, body {
     width: 100%;
     font-size: 1rem;
     margin-right: 1rem;
+    min-width: 300px;
+    min-height: 50px;
+    max-height: 200px;
 }
 
 .header .user-input {
@@ -242,7 +245,11 @@ table {
     width: 100%;
     margin: 0 auto 40px;
     max-width: 800px;
-    border-radius: .5rem;
+    border-radius: 1rem;
+}
+
+table thead {
+    background: rgb(241 245 249);
 }
 
 .string-table table th {
@@ -251,10 +258,6 @@ table {
     vertical-align: middle;
     opacity: 0.9;
     font-size: 1.1rem;
-    background: #EFEFEF;
-    background: #DFE4E8;
-    background: #E9EBEC;
-    background: #EDEFF1;
 }
 
 .string-table table td {
@@ -267,28 +270,15 @@ table {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* margin: 15px; */
     margin-top: 1rem;
-    margin-bottom: 2rem;
 }
 
-.footer h2 {
-    /* font-family: var(--google-font-inconsolata); */
-    font-family: var(--system-font);
-    margin: 10px;
-    padding-left: 10px;
-    font-size: 1.1em;
-    color: #333;
-}
-
-.footer h2 a {
+.footer a {
     color: #333;
     text-decoration: none;
 }
 
-.footer h2 a:hover {
-    background: #444;
-    color: #fff;
+.footer a:hover {
     cursor: pointer;
     text-decoration: underline;
 }

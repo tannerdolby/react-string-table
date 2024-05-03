@@ -22,7 +22,7 @@ const navLinkData = [
 export default function Footer() {
   return (
     <div className="footer">
-      <p>Created by tannerdolby</p>
+      <p>created by <a href="https://github.com/tannerdolby">tannerdolby</a></p>
       <div className="navbar">
         <ul>
           {navLinkData.map((item, i) => {

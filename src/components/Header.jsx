@@ -9,6 +9,7 @@ export default function Header({ input, handleReset, handleChange }) {
           onChange={handleChange}
           id='string-input'
           placeholder="Enter string..."
+          rows={2}
         />
         <button className="reset-btn" onClick={handleReset}>
           Clear
